@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biografía</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Bebas Neue';font-size: 22px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="contenidoprincipal">
+        <header>
+            <nav id="barranavegacion">
+                <ul class="menu">
+                    <li><a href="./index.html">Bienvenida</a></li></li>
+                    <li><a href="./biografia.html">Biografía</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <main>
+            <section id="biografía"  class="content">
+                <h2>Biografía</h2>
+                <p>Os cuento un poco sobre mí:</p>
+                <p>Me llamo Cris, tengo 29 años y nací en Madrid, pero parte de mi familia es de un pueblo pequeño de la Sierra de Gredos, Navarrevisca, y he pasado gran parte de mi vida allí.</p>
+                <p>Vivo en Madrid con mi gato <i>Juanito</i>.</p>
+                <div class ="vídeo">   
+                <video width="320" height="240" autoplay replay muted>
+                        <source src="./Vídeos/vídeo.mp4" type="video/mp4">
+                    </video>
+                </div> 
+                <p>Estudié el <i>Grado Superior de Técnico/a en Integración Social</i> y después el <i>Grado de Maestro/a en Educación Primaria</i>. He trabajado como monitora de ocio y tiempo libre, integradora social, becaria de investigación en la universidad, dinamizadora juvenil y educadora de calle, coordinadora y maestra para diferentes entidades del ámbito social y colectivos. Puedes ver mi experiencia y formación en mi <a href="www.linkedin.com/in/cristinaglezcal" target="_blank">perfil de LinkedIn</a>.</p>
+                <p><mark>Este año me he propuesto cambiar de ámbito profesional y empezar en el mundo de la programación</mark> y a ratos me siento un poco parecido a esto: </p>
+                <img src="./Imágenes/Gif2.gif" alt="Cris" class="gif2">
+                    <audio id="grito" src="./Audio/grito.mp3"></audio>
+                    <button class="grito" onclick="document.getElementById('grito').play()">
+                    🔊 Reproducir grito
+                    </button>
+            </section>
+        </main>
+    </div>   
+            <footer>
+                <div class ="footer-content">
+                    <p>2025 Fundamentals FullStack</p>
+                    <p>cris@bootcampfullstack.com</p>
+                    <p>Cristina González Calvín</p>
+                </div>
+            </footer>
+    </body>
+</html>

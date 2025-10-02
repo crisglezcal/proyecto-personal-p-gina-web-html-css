@@ -1,0 +1,474 @@
+/* Paleta de colores */
+:root {
+    --dark-purple: #1c0221ff;
+    --chinese-violet: #7b5e7bff;
+    --beaver: #938274ff;
+}
+
+* { /* Afecta a todo el documento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Hace que el padding y border NO aumenten el tamaño total */
+    font-family: 'Bebas Neue'; /* Fuente */
+    scroll-behavior: smooth; /* Sroll suave */
+    scroll-margin-top: 20px; /* Margen para el scroll suave */
+    transition: 0.5s ease; /* Tiempo que dura la animación */
+}
+
+body { /* Afecta al body */
+    background-image: url('Imágenes/Fondo.jpg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* Fondo centrado */
+    background-repeat: no-repeat; /* La imagen aparece solo una vez */
+    background-attachment: fixed; /* Imagen fija aunque se mueva la pantalla */
+    min-height: 100vh; /* Ocupa toda la pantalla */
+    display: flex; /* Usa flexbox para organizar */
+    flex-direction: column; /* Organiza los elementos en columnas */
+}
+
+/* Header no fijo, fluye con el contenido */
+header {
+    display: flex; /* Usa flexbox para organizar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px 20px;
+    position: relative; /* Posición relativa que fluye con la página */
+    top: auto; /* No fuerza la posición desde arriba */
+    left: auto; /* No fuerza la posición desde la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Está por encima de casi todo */
+    background-color: transparent; /* Fondo invisible */
+    backdrop-filter: none; /* Sin efecto de desenfoque */
+    border-bottom: none; /* Sin línea abajo */
+}
+
+#barranavegacion {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Ocupa máximo 1200px */
+}
+
+#barranavegacion ul {
+    display: flex; /* Los elementos en fila horizontal */
+    flex-direction: row; /* Dirección horizontal */
+    justify-content: center; /* Centra los elementos */
+    flex-wrap: wrap; /* Si no caben, bajan a otra línea*/
+    list-style: none; /* Deja la lista sin puntitos */
+    gap: 8px; /* Espacio entre elementos */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0; /* Sin espacio interno */
+    margin: 0; /* Sin espacio externo */
+    text-align: center; /* Texto centrado */
+}
+
+#barranavegacion ul li {
+    width: auto; /* Ancho automático según el contenido */
+    flex: 1; /* Todos los elementos crecen para llenar el espacio */
+    min-width: 120px; /* Ancho mínimo */
+    max-width: 200px; /* Ancho máximo */
+}
+
+#barranavegacion ul li a {
+    text-decoration: none; /* Quita subrayados de enlaces y otros aspectos */
+    display: block; /* Ocupa todo el espacio de la lista */
+    text-align: center; /* Texto centrado */
+    background: var(--beaver);
+    backdrop-filter: blur(5px); /* Transparencia para el fondo */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: var(--dark-purple);
+    padding: 10px 15px;
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ocupa todo el ancho disponible */
+    transition: all 0.3s ease; /* Transiciones suaves */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 0.9rem; /* Tamaño de texto */
+}
+
+#barranavegacion ul li a:hover { /* Cambia el color al posar el raton */
+    background: rgba(255, 255, 255, 0.3); 
+    color: white;
+    transform: translateY(-2px); /* Se eleva 2px hacia arriba */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+#contenidoprincipal {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 15px;
+    margin-top: 10px;
+}
+
+h1, h2 {
+    margin: 15px 5px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    text-align: center;
+    scroll-margin-top: 100px; /* Al hacer scroll, deja 100px de espacio arriba */
+}
+
+h1 {
+    color: var(--dark-purple);
+}
+
+h2 {
+    color: var(--dark-purple);
+}
+
+#presentación, #biografía, #portfolio, #contacto {
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #000000;;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    text-align: center;
+    scroll-margin-top: 80px; /* Al hacer scroll, deja 80px de espacio arriba */
+}
+
+/* Elementos de texto centrados */
+p, li, td, th {
+    text-align: center;
+}
+
+/* Fondo más opaco para el formulario de contacto */
+#contacto {
+    background: rgba(128, 128, 128, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+/* Formulario centrado y espaciado */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Label */
+form label {
+    color: var(--dark-purple);
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Campos del formulario */
+form input, form textarea, form select {
+    padding: 12px;
+    border: 1px solid var(--chinese-violet);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--dark-purple);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: var(--chinese-violet);
+}
+
+input[type="submit"] {
+    height: auto;
+    font-size: 1.2rem;
+    background-color: var(--chinese-violet);
+    color: var(--dark-purple);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin: 25px auto;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover { /* Hoover que cambia de color al hacer click y el botón se eleva 3px */
+    background-color: var(--beaver);
+    border-radius: 20px;
+    transform: translateY(-3px);
+}
+
+/* Imágenes, audio y vídeo */
+/* Gif */
+.gif1 {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.gif2 {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;  
+}
+
+/* Fotos */
+.fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.fila { /* Para que las fotos me saliesen en dos filas */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.Cris {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 250px; /* Máximo 250px de ancho */
+    height: 200px; /* Alto fijo de 200px */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.Cris:hover {
+    transform: scale(1.05); /* Se agranda al pasar el mouse */
+}
+
+/* Vídeo */
+.vídeo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.vídeo video {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Botón */
+.grito {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: var(--dark-purple);
+    color: var(--beaver);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Tabla */
+table {
+    border-collapse: collapse; /* Bordes unidos sin espacio */
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 20px 0; /* Espacio arriba y abajo */
+}
+
+table caption { /* Título de tabla */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--chinese-violet);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px; /* Espacio interno en las celdas */
+    text-align: center;
+    border-bottom: 1px solid var(--chinese-violet); /* Línea inferior violeta */
+}
+
+th { /* Color de los encabezados */
+    background-color: rgba(123, 94, 123, 0.3);
+    color: var(--beaver);
+}
+
+td:hover { /* Al pasar el mouse cambian a fondo beige y texto morado oscuro */
+    background-color: var(--beaver);
+    color: var(--dark-purple);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0; /* Pegado al fondo */
+    width: 100%; /* Ancho completo */
+    background: var(--dark-purple);
+    color: var(--beaver);
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto; /* Empuja el footer al final */
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Media queries */
+/* Tablet */
+@media (min-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+    
+    #barranavegacion ul {
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+    
+    #barranavegacion ul li {
+        flex: none;
+    }
+    
+    #barranavegacion ul li a {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    #contenidoprincipal {
+        padding: 25px;
+    }
+    
+    .fila {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .Cris {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .Cris:hover {
+        transform: scale(1.8);
+    }
+    
+    .vídeo video {
+        max-width: 500px;
+    }
+    
+    .gif2 {
+        width: 180px;
+    }
+    
+    .form-grupo {
+        max-width: 450px;
+        margin: 18px 0;
+    }
+    
+    #contacto {
+        min-height: 550px;
+    }
+    
+    #presentación p {
+        font-size: 1.2rem;
+        padding: 0 20px;
+    }
+}
+
+/* Ordenador */
+@media (min-width: 1024px) {
+    #contenidoprincipal {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    header {
+        padding: 15px 50px;
+    }
+    
+    #barranavegacion ul {
+        gap: 25px;
+    }
+    
+    #barranavegacion ul li a {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .fila {
+        gap: 30px;
+    }
+    
+    .Cris {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .Cris:hover {
+        transform: scale(2.5);
+    }
+    
+    .vídeo video {
+        max-width: 600px;
+    }
+    
+    h1, h2 {
+        margin: 25px 10px;
+        padding: 15px 20px;
+    }
+    
+    #presentación, #biografía, #portfolio, #contacto {
+        padding: 30px;
+        margin: 25px 0;
+    }
+    
+    #presentación p {
+        font-size: 1.3rem;
+        padding: 0 30px;
+        line-height: 1.6;
+    }
+    
+    #contacto {
+        min-height: 600px;
+        padding: 40px 30px;
+    }
+    
+    .form-grupo {
+        max-width: 500px;
+        margin: 20px 0;
+    }
+    
+    form label {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    form input, form textarea, form select {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+    
+    footer .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

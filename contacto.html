@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="./styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <style>
+        body {
+        font-family: 'Bebas Neue';font-size: 22px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="contenidoprincipal">
+        <header>
+            <nav id="barranavegacion">
+                <ul class="menu">
+                    <li><a href="./index.html">Bienvenida</a></li></li>
+                    <li><a href="./biografia.html">Biografía</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>        
+            </nav>
+        </header>
+        <main>
+            <section id="contacto"  class="content">
+                <h2>Contacto</h2>
+                <div id="tituloformulario">
+                <form id="formulario"> 
+                    <label for="nombre">Nombre:</label>
+                    <input 
+                    type="text" 
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Introduce tu nombre"
+                    minlength="3"
+                    maxlength="20" 
+                    required/><br>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input 
+                    type="text" 
+                    id="apellidos"
+                    name="apellidos" 
+                    placeholder="Introduce tus apellidos"
+                    minlength="3"
+                    maxlength="20" 
+                    required/><br>
+
+                    <label for="edad">Edad:</label>
+                    <input 
+                    type="number" 
+                    id="edad"
+                    name="edad" 
+                    placeholder="Introduce tu edad"
+                    min="1"
+                    max="120" 
+                    required/><br>
+
+                    <label for="email">Email:</label>
+                    <input 
+                    type="email" 
+                    id="email"
+                    name="email"
+                    placeholder="Introduce tu email" 
+                    required/><br>
+
+                    <label for="tlf">Número de teléfono:</label>
+                    <input 
+                    type="number" 
+                    id="tlf"
+                    name="tlf"
+                    pattern="[0-9 {9}]"
+                    title="Debe tener 9 dígitos"
+                    placeholder="Introduce tu teléfono" 
+                    required/><br>
+
+                    <label for="mensaje">Déjame un mensaje:</label>
+                    <textarea 
+                    id="mensaje"
+                    name="mensaje" 
+                    rows="5" 
+                    cols="40"
+                    minlength="100"
+                    maxlength="500"
+                    placeholder="Escribe tu mensaje aquí..."
+                    ></textarea><br>
+
+                    <label for="charleta">¿De qué quieres que hablemos?</label>
+                    <div>
+                        <label for="escalada">
+                        <input 
+                        type="radio"
+                        id="escalada"
+                        name="afición"
+                        value="escalada"/>
+                        Escalada       
+                        </label>
+
+                        <label for="ornitología">
+                        <input 
+                        type="radio"
+                        id="ornitología"
+                        name="afición"
+                        value="ornitología"/>
+                        Ornitología       
+                        </label>
+
+                        <label for="manualidades">
+                        <input 
+                        type="radio"
+                        id="manualidades"
+                        name="afición"
+                        value="manualidades"/>
+                        Manualidades    
+                        </label>
+
+                        <label for="lectura">
+                        <input 
+                        type="radio"
+                        id="lectura"
+                        name="afición"
+                        value="lectura"/>
+                        Lectura    
+                        </label>        
+                    </div><br>
+
+                    <div>
+                        <label>
+                            <input
+                            type="checkbox"
+                            id="acepto"
+                            value="acepto"
+                            name="acepto"/>
+                        Acepto recibir información por correo electrónico
+                        </label>
+                    </div><br>
+                    <input type="submit" value="enviar"/><br>              
+                </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class ="footer-content">
+                <p>2025 Fundamentals FullStack</p>
+                <p>cris@bootcampfullstack.com</p>
+                <p>Cristina González Calvín</p>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
