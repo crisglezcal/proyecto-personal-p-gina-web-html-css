@@ -16,7 +16,7 @@
 }
 
 body { /* Afecta al body */
-    background-image: url('Imágenes/Fondo.jpg'); /* Imagen de fondo */
+    background-image: url('./imágenes/Fondo.jpg'); /* Imagen de fondo */
     background-size: cover; /* La imagen cubre toda la pantalla */
     background-position: center; /* Fondo centrado */
     background-repeat: no-repeat; /* La imagen aparece solo una vez */
