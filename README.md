@@ -1,4 +1,4 @@
-# 🎬 EJERCICIO  - Gestor de películas 
+# 💁 EJERCICIO  - Personal Landing Page 
 
 ## 📋 Descripción del proyecto:
 
