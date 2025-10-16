@@ -20,30 +20,6 @@ Este proyecto es una landing page personal desarrollada como ejercicio del bootc
 
 ---
 
-## 🗂️ Estructura de la carpeta del proyecto web
-
-proyecto-personal-pagina-web-html-css/
-│
-├── assets/
-│   ├── images/
-│   │   ├── Favicon1.png
-│   │   ├── Gif1.gif
-│   │   └── logo.png
-│   |
-|   |── videos/
-│       └── vídeo.mp4
-│  
-│
-├── styles.css
-│
-├── index.html
-├── biografia.html
-├── portfolio.html
-├── contacto.html
-└── README.md
-
----
-
 ## ➡️ Siguientes pasos
 
 - **Añadir funcionalidades** ⚙️ 
